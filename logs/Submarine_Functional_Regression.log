@@ -1,0 +1,128 @@
+2021-03-12 17:46:32,713 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-12 17:48:06,187 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 12:52:00,300 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 12:54:26,519 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:02:10,988 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:02:36,187 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:02:39,614 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:02:39,616 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:02:40,559 INFO c.s.l.ExtentManager [main] Directory: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target is created!
+2021-03-15 13:02:41,120 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (f1adcfc7f43ace2ae67c0352e0740e4b)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:02:41,142 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:04:47,780 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:04:52,819 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:04:55,954 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:04:55,955 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:04:56,533 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:04:56,723 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (e0ce0eba8f41d0dc6bfe6c0a74e8c73c)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:04:56,745 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:09:22,294 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:09:26,940 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:09:29,946 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:09:29,947 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:09:30,643 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:09:30,891 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (a59aed7caa3fe3ac0513cbc3a02eed4b)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:09:30,913 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:10:51,775 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:10:55,900 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:10:59,294 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:10:59,295 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:11:00,611 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:11:00,901 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (8a2164b02c9cc3de6826c61b920b67be)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:11:00,917 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:12:43,006 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:12:48,187 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:12:51,143 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:12:51,144 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:12:52,046 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:12:52,332 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (ddfc7b9724c48aca9717cf3b7665c65d)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:12:52,388 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:19:31,909 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:19:37,107 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:19:39,908 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:19:39,909 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:19:40,562 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:19:40,787 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (e977453d8399d2fac52a55c34a8db1fe)] -> xpath: //input[@id='passwordInput']]nulljava.lang.NullPointerException
+2021-03-15 13:19:40,804 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:20:44,116 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:20:49,153 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:20:53,113 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:20:53,114 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:24:02,600 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:24:07,812 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:24:10,637 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:24:10,638 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:24:29,779 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:24:34,842 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (52f47a2f669330cff0cda51bf0c0090f)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:26:36,624 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:26:41,416 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:26:44,249 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:26:44,253 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:27:11,008 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:27:16,101 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (e6ae851aa08eee497e1d9a5a70acd43b)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:29:20,057 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:32:23,377 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:32:28,160 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:32:31,474 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:32:31,475 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:32:32,046 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:32:32,217 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (c318d5e98098b332d056a4ed3b99b0a3)] -> xpath: //input[@id='passwordInput']]nulljava.lang.NullPointerException
+2021-03-15 13:32:32,242 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:34:23,885 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:34:27,592 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:34:30,876 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:34:30,877 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:34:32,004 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:34:32,211 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (2e11f05e66d71c1214dceb32ae32f405)] -> id: usernameInput]nulljava.lang.NullPointerException
+2021-03-15 13:34:32,228 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:37:13,085 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:37:17,468 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:37:20,535 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:37:20,536 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:37:31,404 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:37:31,600 ERROR c.s.u.CommonUtils [main] Unaable to set text [[ChromeDriver: chrome on WINDOWS (ddb8d41ae8935cfb4223049fc20e5250)] -> xpath: //input[@id='passwordInput']]nulljava.lang.NullPointerException
+2021-03-15 13:37:31,614 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:39:52,745 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:39:57,543 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:40:00,106 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:40:00,107 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:40:11,077 INFO c.s.u.CommonUtils [main] Clicked on Button::Sign in successfully
+2021-03-15 13:40:11,082 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:40:11,367 ERROR c.s.u.CommonUtils [main] Click on button  isSign innulljava.lang.NullPointerException
+2021-03-15 13:40:11,368 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:47:58,690 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:48:02,400 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:48:05,721 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:48:05,721 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:48:16,429 INFO c.s.p.LoginPage [main] Login is Successful.
+2021-03-15 13:48:16,467 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:48:16,468 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:48:47,153 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:48:47,159 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-15 13:49:33,402 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-15 13:49:38,243 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-15 13:49:41,125 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:49:41,126 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:49:51,737 INFO c.s.p.LoginPage [main] Login is Successful.
+2021-03-15 13:49:51,759 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-15 13:49:51,760 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-15 13:50:22,778 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-15 13:50:22,783 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-16 11:25:31,765 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-16 11:25:36,645 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-16 11:25:40,628 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-16 11:25:40,629 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-16 11:25:51,436 INFO c.s.p.LoginPage [main] Login is Successful.
+2021-03-16 11:25:51,463 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-16 11:25:51,464 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-16 11:26:22,425 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-16 11:26:22,483 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
+2021-03-18 17:10:42,502 INFO c.s.c.BaseConfig [main] Before suite set up completed
+2021-03-18 17:10:49,134 INFO c.s.c.BaseConfig [main] Set environemnt as INTEGRATION
+2021-03-18 17:10:51,440 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-18 17:10:51,441 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-18 17:11:02,321 INFO c.s.p.LoginPage [main] Login is Successful.
+2021-03-18 17:11:02,350 INFO c.s.u.CommonUtils [main] Constructor initialize in CommonUtils class.
+2021-03-18 17:11:02,350 INFO c.s.p.LoginPage [main] Constructor 1 initialize in Login Page class.
+2021-03-18 17:11:33,783 ERROR c.s.p.LoginPage [main] Error occurred while Login process.
+2021-03-18 17:11:33,856 INFO c.s.l.ExtentManager [main] Directory already exists: C:\Users\vmn3347\workspace\Submarine_Functional_Regression\target
