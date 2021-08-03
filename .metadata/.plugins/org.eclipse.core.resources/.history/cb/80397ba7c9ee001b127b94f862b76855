@@ -1,0 +1,294 @@
+package com.sn.pageobjects;
+
+import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.eclipse.core.internal.resources.File;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
+import com.google.common.base.Charsets;
+import com.google.common.io.Files;
+import com.sn.apt.browser.operations.BrowserOperationsImpl;
+import com.sn.apt.excel.read.ReadExcelData;
+import com.sn.apt.util.AutoPilotUtil;
+import com.sn.config.BaseConfig;
+import com.sn.utils.CommonUtils;
+
+public class StoA_MS_SubmissionPage  {
+
+	private static final Logger LOGGER = LogManager.getLogger(LoginPage.class);
+
+	private BaseConfig baseConfig;
+
+	private CommonUtils commonUtils;
+
+	@FindBy(xpath = "//button[text()='Accept']")
+	private WebElement acceptAllCookiesBtn;
+
+	@FindBy(id = "login-email")
+	private WebElement stoaLoginPageEmailTxtBox;
+
+	@FindBy(xpath = "//button[contains(@id,'submit')]")
+	private WebElement nextBtn;
+
+	@FindBy(id = "login-password")
+	private WebElement stoaLoginPagePasswordTxtBox;
+
+	@FindBy(id = "login-submit")
+	private WebElement stoaLoginPageLoginBtn;
+
+	@FindBy(linkText = "OK")
+	private WebElement privacyPolicyOkBtn;
+
+	@FindBy(xpath = "//input[@value='Start submission']")
+	private WebElement startsubmissionBtn;
+
+	@FindBy(xpath = ".//input[@type='file']")
+	private WebElement fileTab_uploadManuscriptBtn;
+
+	@FindBy(xpath = "//span[text()='Declarations']/parent::a")
+	private WebElement declarationsTabLink;
+
+	@FindBy(xpath = "//label[@for='open-access']")
+	private WebElement openAccessCheckBox;
+
+	@FindBy(xpath = "//label[@for='competing-interest-no']/preceding-sibling::input")
+	private WebElement competingInterestNoRadioButton;
+
+	@FindBy(id = "dual-publication-no")
+	private WebElement dualPublicationRadioButton;
+
+	@FindBy(id = "authorship")
+	private WebElement authorshipCheckBox;
+
+	@FindBy(id = "third-party-material-no")
+	private WebElement thirdPartyMaterialNoRadioButton;
+
+	@FindBy(xpath = "//span[text()='Details']/parent::a")
+	private WebElement detailsTabLink;
+
+	@FindBy(id = "title_ifr")
+	private WebElement title_iframe;
+
+	@FindBy(id = "tinymce")
+	private WebElement titleTextBox;
+
+	@FindBy(id = "abstract_ifr")
+	private WebElement abstract_iframe;
+
+	@FindBy(xpath = "//body[@data-id='abstract']")
+	private WebElement abstract_textBox;
+
+	@FindBy(name = "cover_letter")
+	private WebElement uploadCoverLetterButton;
+
+	@FindBy(xpath = "//span[text()='Authors']/parent::a")
+	private WebElement authorsTabLink;
+
+	@FindBy(name = "author_0_first_name")
+	private WebElement author_first_name;
+
+	@FindBy(name = "author_0_last_name")
+	private WebElement author_last_name;
+
+	@FindBy(name = "author_0_email")
+	private WebElement author_email;
+
+	@FindBy(id = "author-0-affiliation")
+	private WebElement author_affiliationDropDown;
+
+	@FindBy(xpath = "//label[text()='No funding']/preceding-sibling::input")
+	private WebElement author_funding;
+
+	@FindBy(id = "corresponding-author")
+	private WebElement author_corresponding_authorDropDown;
+
+	@FindBy(id = "author-contributions")
+	private WebElement author_contributionsTextBox;
+
+	@FindBy(xpath = "//span[text()='Subjects']/parent::a")
+	private WebElement subjectTabLink;
+
+	@FindBy(id = "subject:biological-sciences___biochemistry")
+	private WebElement subject_biochemistry;
+
+	@FindBy(id = "subject:biological-sciences___biological-techniques")
+	private WebElement subject_biological_techniques;
+
+	@FindBy(xpath = "//span[text()='Review']/parent::a")
+	private WebElement reviewTabLink;
+
+	@FindBy(id = "dashboard_for_all_opt_in")
+	private WebElement dashboard_for_all_opt_in_checkBox;
+
+	@FindBy(xpath = "//input[@value ='Submit manuscript']")
+	private WebElement submit_manuscriptBtn;
+
+	@FindBy(linkText = "track the progress of your submission")
+	private List<WebElement> trackSubmissionLink;
+
+	@SuppressWarnings("squid:S3366")
+	public StoA_MS_SubmissionPage(final BaseConfig baseConfig) {
+
+		this.baseConfig = baseConfig;
+		PageFactory.initElements(baseConfig.getBaseDriver(), this);
+		this.commonUtils = new CommonUtils(baseConfig);
+		LOGGER.info("Constructor 1 initialize in Login Page class.");
+	}
+
+	public StoA_MS_SubmissionPage(final BaseConfig baseConfig, final String userKey, final String passKey)
+			throws Exception {
+
+		this(baseConfig);
+		LOGGER.info("Before constructor 2 " + this.baseConfig.getConfig()
+				.getProperty(passKey + "_" + BaseConfig.getExecutionEnvApp().toLowerCase()));
+
+	}
+
+	String filePath = System.getProperty("user.dir") + "/TestData";
+
+	String fileName = "/TestData.xlsx";
+
+	String sheetName = "Sheet1";
+
+	public void loginToStoa(String stoA_userName, String stoA_password, String stoa_create_ms_file_path,
+			String stoa_create_ms_title, String stoa_create_ms_abstract, String stoa_create_ms_cover_letter_file_path,
+			String stoa_create_ms_author_first_name, String stoa_create_ms_author_last_name,
+			String stoa_create_ms_author_email, String stoa_create_ms_author_affiliation,
+			String stoa_create_ms_author_funding, String stoa_create_ms_author_contribution) throws Exception {
+
+		Thread.sleep(5000);
+
+		commonUtils.clickOnButton(acceptAllCookiesBtn);
+
+		commonUtils.setText(stoaLoginPageEmailTxtBox, stoA_userName, "Email id is entered in stoa.");
+		Thread.sleep(5000);
+
+		commonUtils.clickOnButton(nextBtn);
+
+		commonUtils.setText(stoaLoginPagePasswordTxtBox, stoA_password, "Password is entered in stoa.");
+		Thread.sleep(5000);
+		commonUtils.clickOnButton(nextBtn);
+
+		
+
+		// commonUtils.clickOnButton(stoaLoginPageLoginBtn);
+
+		// Assert.assertEquals(baseConfig.getBrowseroprimpl().storeCurrentURL(),
+		// baseConfig.getConfig().getProperty("stoa_home_page_url"));
+
+		commonUtils.clickOnElement(privacyPolicyOkBtn);
+
+		commonUtils.clickOnButton(startsubmissionBtn);
+
+		Thread.sleep(5000);
+
+		System.out.println(System.getProperty("user.dir") + stoa_create_ms_file_path);
+		commonUtils.setText(fileTab_uploadManuscriptBtn, System.getProperty("user.dir") + stoa_create_ms_file_path,
+				"Menuscript file is uploaded.");
+		Thread.sleep(2000);
+
+		commonUtils.clickOnButton(declarationsTabLink);
+		Thread.sleep(5000);
+
+		commonUtils.clickOnButton(openAccessCheckBox);
+		Thread.sleep(5000);
+
+		// commonUtils.clickOnButton(competingInterestNoRadioButton);
+
+		competingInterestNoRadioButton.click();
+
+		dualPublicationRadioButton.click();
+
+		authorshipCheckBox.click();
+
+		thirdPartyMaterialNoRadioButton.click();
+
+		Thread.sleep(5000);
+
+		detailsTabLink.click();
+
+		baseConfig.getFrameactions().switchToFrame(baseConfig.getBaseDriver(), title_iframe);
+
+		commonUtils.setText(titleTextBox, stoa_create_ms_title, "Title is entered.");
+
+		baseConfig.getFrameactions().switchtoDefaultFrame(baseConfig.getBaseDriver());
+
+		baseConfig.getFrameactions().switchToFrame(baseConfig.getBaseDriver(), abstract_iframe);
+
+		commonUtils.setText(abstract_textBox, stoa_create_ms_abstract, "Abstract text is entered.");
+
+		baseConfig.getFrameactions().switchtoDefaultFrame(baseConfig.getBaseDriver());
+
+		commonUtils.setText(uploadCoverLetterButton,
+				System.getProperty("user.dir") + stoa_create_ms_cover_letter_file_path, "Cover letter is uploaded.");
+
+		Thread.sleep(2000);
+		commonUtils.clickOnButton(authorsTabLink);
+
+		Thread.sleep(5000);
+
+		commonUtils.setText(author_first_name, stoa_create_ms_author_first_name, "Author first name is entered.");
+
+		commonUtils.setText(author_last_name, stoa_create_ms_author_last_name, "Author last name is entered.");
+
+		commonUtils.setText(author_email, stoa_create_ms_author_email, "Author email is entered.");
+
+		commonUtils.selectDropDowns(author_affiliationDropDown, stoa_create_ms_author_affiliation);
+
+		// commonUtils.selectDropDowns(author_funding, stoa_create_ms_author_funding);
+		
+		Thread.sleep(5000);
+		
+		author_funding.click();
+
+		Thread.sleep(5000);
+
+		commonUtils.selectDropDowns(author_corresponding_authorDropDown,
+				"1 - " + stoa_create_ms_author_last_name + " <" + stoa_create_ms_author_email + ">");
+
+		commonUtils.setText(author_contributionsTextBox, stoa_create_ms_author_contribution,
+				"Author contribution is entered.");
+
+		Thread.sleep(5000);
+		commonUtils.clickOnButton(subjectTabLink);
+
+		// commonUtils.clickOnButton(subject_biochemistry);
+
+		// commonUtils.clickOnButton(subject_biological_techniques);
+
+		subject_biochemistry.click();
+
+		subject_biological_techniques.click();
+		Thread.sleep(5000);
+
+		commonUtils.clickOnButton(reviewTabLink);
+		Thread.sleep(5000);
+
+		// commonUtils.clickOnButton(dashboard_for_all_opt_in_checkBox);
+
+		dashboard_for_all_opt_in_checkBox.click();
+		Thread.sleep(5000);
+
+		commonUtils.clickOnButton(submit_manuscriptBtn);
+		Thread.sleep(5000);
+
+		Assert.assertTrue(trackSubmissionLink.size() == 1, "MSID is not created.");
+
+	}
+
+	public String getMSID() {
+
+		System.out.println("Current thread name :" + Thread.currentThread().getName());
+
+		return baseConfig.getBaseDriver().getCurrentUrl().substring(64, 100);
+
+	}
+
+}

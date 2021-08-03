@@ -25,6 +25,8 @@ private LoginPage loginobj;
   @Test(dataProvider = "dp")
   public void f(Integer n, String s) {
   }
+  
+  
   @BeforeMethod
   public void beforeMethod() throws Exception {
 	  loginobj = new LoginPage(this);

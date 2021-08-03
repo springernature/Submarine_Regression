@@ -1,0 +1,107 @@
+package com.sn.sanity;
+
+import java.io.IOException;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.omg.CORBA.COMM_FAILURE;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.sn.config.BaseConfig;
+import com.sn.pageobjects.HomePage;
+import com.sn.pageobjects.LoginPage;
+import com.sn.pageobjects.MS_Overeview_Page;
+import com.sn.utils.CommonUtils;
+
+public class QC_Fail_Test extends BaseConfig {
+
+	private static final Logger LOGGER = LogManager.getLogger(QC_Fail_Test.class);
+
+	private StoAMenuscriptCreation stoAMenuscriptCreation;
+	private LoginPage loginPage;
+	private HomePage homePage;
+
+	private MS_Overeview_Page ms_Overeview_Page;
+
+	@Test()
+	public void qcFailFlowTest() throws Exception {
+
+		// MSID create
+
+		stoAMenuscriptCreation = new StoAMenuscriptCreation();
+
+		 String msid =stoAMenuscriptCreation.createMS(BaseConfig.TEST_DATA_QC_FAIL_SHEET_NAME);
+
+//		String msid = "7ec99411-cdcd-4b81-8f34-c7c031238f1b";
+
+		System.out.println(msid);
+
+		// Login code
+
+		getBaseDriver().get(getConfig().getProperty("INTURL"));
+
+		loginPage = new LoginPage(this);
+
+		loginPage.login(getConfig().getProperty("submarine_ea_userName"),
+				getConfig().getProperty("submarine_ea_password"));
+
+		homePage = new HomePage(this);
+		Thread.sleep(80000);
+
+		homePage.SearchMSID(msid);
+
+		Thread.sleep(5000);
+		String selectedShowValue = homePage.selectShowDropDownValue("Show all");
+
+		Thread.sleep(5000);
+		Assert.assertEquals(selectedShowValue, "Show all");
+
+		Assert.assertEquals(homePage.getMSFilterDropDownSelectedValue(), "MSID");
+
+		// Assert.assertEquals(homePage.getMSIDStatusValue(), "Initial Submission");
+
+		Assert.assertEquals(homePage.getMSIDMyActionValue(), "Assign EA");
+
+		Assert.assertEquals(homePage.getMSIDNumber(), msid);
+
+		String currentTabId = homePage.clickOnMSID();
+
+		System.out.println(currentTabId);
+
+		Thread.sleep(5000);
+
+		homePage.switchToMsidTab(currentTabId);
+
+		ms_Overeview_Page = new MS_Overeview_Page(this);
+
+		// Before Assign Me validations
+		String[] expectedActionLinksArray = { "Withdraw from pub.", "Reject for publication", "Accept for publication",
+				"Request amendment", "Ready for editorial", "Request revision", "Show Amendment Link", "Escalate",
+				"Resolve escalation", "Check for duplicate", "Check for duplicate", "Read abstract", "Open early proof",
+				"Check in iThenticate", "Check EBM batches", "Find EBMs" };
+
+		ms_Overeview_Page.CheckAllActionsAreDisabled(expectedActionLinksArray);
+
+		ms_Overeview_Page.assignMSID();
+		Thread.sleep(5000);
+
+		ms_Overeview_Page.startQC();
+
+		Thread.sleep(5000);
+
+		String[] expectedEnabledLinksAfterQC = { "Withdraw from pub.", "Reject for publication", "Ready for editorial",
+				"Escalate", "Resolve escalation", "Check for duplicate", "Check for duplicate", "Read abstract",
+				"Open early proof", };
+
+		ms_Overeview_Page.checkEnableActions(expectedActionLinksArray);
+
+		ms_Overeview_Page.clickOnActionsBtn();
+
+		ms_Overeview_Page.requestAmendment();
+
+		
+
+	}
+
+}

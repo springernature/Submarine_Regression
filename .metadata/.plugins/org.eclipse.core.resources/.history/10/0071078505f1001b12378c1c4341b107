@@ -1,0 +1,14 @@
+package com.test.api;
+
+public class RequestInput {
+	
+	
+	
+	public void sendGetrequest() {
+		
+		
+		given().
+		
+	}
+
+}

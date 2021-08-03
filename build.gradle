@@ -39,6 +39,8 @@ property "sonar.projectKey", "Submarine_Functional_Regression"
 }
 buildDir = 'target'
 dependencies {
+
+compile group: 'net.java.dev.jna', name: 'jna-platform', version: '5.2.0'
 //java -selenium dependency
 compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.11.0'
 //webdriver manager dependency - for browser set up
@@ -81,7 +83,7 @@ compile group: 'org.springframework', name: 'spring-context', version: '3.0.7.RE
 compile group: 'org.springframework', name: 'spring-core', version: '3.0.7.RELEASE'
 compile group: 'org.springframework', name: 'spring-test', version: '3.0.7.RELEASE'
 compile group: 'software.amazon.ion', name: 'ion-java', version: '1.0.2'
-compile group: 'com.springernature', name: 'AutoPilot', version: '2.0.5'
+compile group: 'com.springernature', name: 'AutoPilot', version: '3.1.1'
 // Browserstack dependency
 // https://mvnrepository.com/artifact/com.browserstack/automate-testassist
 compile group: 'com.browserstack', name: 'automate-testassist', version: '1.0.0'
